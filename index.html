@@ -16,17 +16,17 @@
           }
           $(document).ready(function(){
              $('#large_box').click(function(){
-               $("div[class$='_box'").css('background-color', '#' + Math.floor(Math.random()*16777215).toString(16));
-               $("div[id$='_box'").css('background-color', '#' + Math.floor(Math.random()*16777215).toString(16));
+               $("div[class$='_box'").css('background-color', random_color());
+               $("div[id$='_box'").css('background-color',random_color());
               })
               
              $('.side_box').click(function(event){
                 event.stopPropagation();
-                $(this).siblings().css('background-color', '#' + Math.floor(Math.random()*16777215).toString(16));
+                $(this).siblings().css('background-color', random_color());
              })
              $('.middle_box').click(function(event){
                 event.stopPropagation();
-                $('#large_box').css('background-color', '#' + Math.floor(Math.random()*16777215).toString(16));
+                $('#large_box').css('background-color', random_color());
              })
           });
       </script>
